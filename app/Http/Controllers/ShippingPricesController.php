@@ -13,8 +13,8 @@ class ShippingPricesController extends Controller
 
 		if ($request->input('weight')) {
 			$prices->where([
-			    ['weight_from', '<', $request->input('weight')],
-			    ['weight_to', '>', $request->input('weight')],
+			    ['weight_from', '<=', $request->input('weight')],
+			    ['weight_to', '>=', $request->input('weight')],
 			]);
 		}
 

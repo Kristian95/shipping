@@ -13,21 +13,15 @@
         <div class="row">
             <form method="get" action="{{ route('index') }}">
                 <div class="col-sm-3">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input type="text" name="weight" class="form-control" placeholder="Enter Weight">
+                    <input type="text" value="{{ request()->get('weight') ?? null }}" name="weight" class="form-control" placeholder="Enter Weight">
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input type="text" name="sender" class="form-control" placeholder="Enter Sender">
+                    <input type="text" value="{{ request()->get('sender') ?? null }}" name="sender" class="form-control" placeholder="Enter Sender">
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="input-group-prepend">
-                    </div>
-                    <input type="text" name="recipient" class="form-control" placeholder="Enter Recipient">
+                    <input type="text" value="{{ request()->get('recipient') ?? null }}" name="recipient" class="form-control" placeholder="Enter Recipient">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Search</button>
